@@ -5,9 +5,21 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('express-handlebars')
 var userRouter = require('./routes/users');
+var db = require('./dbConnection')
 // var usersRouter = require('./routes/users');
 
 var app = express();
+
+db.connect((err)=>{
+  if(err){
+    console.log(err);
+  }else{
+    console.log('Database connected');
+  }
+})
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
