@@ -95,7 +95,8 @@ label {
 
  .results-heading{
    text-align: center;
-   margin-top: 50px;
+   margin-top: 20px;
+   text-decoration: underline;
    font-family: 'Odibee Sans', cursive;
    letter-spacing: 0.5rem;
    font-size: 5rem;
