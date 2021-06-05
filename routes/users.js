@@ -15,13 +15,20 @@ router.get('/admin',(req,res)=>{
   res.render('admin-login');
 });
 
-router.get('/admin/results',(req,res)=>{
-  res.render('results')
+router.get('/admin/rtfliumhglimshjcdordhlewiorltyvguorlfig',(req,res)=>{
+  functionHelper.getResults().then((list)=>{
+    let captains = list[0];
+    let asstcaptains = list[1];
+    let sportscaptains = list[2];
+    // console.log(captains,asstcaptains,sportscaptains);
+    res.render('results',{captains,asstcaptains,sportscaptains})
+  })
+  // res.render('results')
 })
 
 router.post('/',(req,res)=>{
   functionHelper.addOneVoter(req.body).then((response)=>{
-    console.log(response);
+    // console.log(response);
     res.redirect('/')
   }).catch((err)=>{
     console.log(err);
@@ -35,7 +42,7 @@ router.post('/admin-login',(req,res)=>{
   // console.log(req.body);
   let loginStatus = functionHelper.adminLogin(req.body);
   if(loginStatus){
-    res.redirect('/admin/results')
+    res.redirect('/admin/rtfliumhglimshjcdordhlewiorltyvguorlfig')
   }else{
     res.redirect('/admin')
   }
