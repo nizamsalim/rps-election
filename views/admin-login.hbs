@@ -1,11 +1,12 @@
 <div class="admin-login" >
     <div class="login-form" >
         <h2>ADMIN LOGIN</h2>
-        <form action="">
+        <form action="/admin-login" method="POST">
             <label for="" class="form-label">Username</label>
-            <input type="text" class="form-control">
-            <label for="" class="form-label">Password></label>
-            <input type="password" class="form-control">
+            <input type="text" class="form-control" name="username">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+            <input type="submit" class="form-control mt-4 btn btn-success">
         </form>
     </div>
 </div>

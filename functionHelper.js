@@ -16,5 +16,16 @@ module.exports = {
                 }
             })
         })
+    },
+    adminLogin:(inputData)=>{
+        let username = 'admin';
+        let password = '';
+        let inputUsername = inputData.username;
+        let inputPassword = inputData.password;
+        if(username === inputUsername && password === inputPassword){
+            return true
+        }else{
+            return false
+        }
     }
 }
