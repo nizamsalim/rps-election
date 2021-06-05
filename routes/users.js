@@ -12,7 +12,7 @@ router.get('/vote',(req,res)=>{
 });
 
 router.get('/admin/results',(req,res)=>{
-  res.render('results');
+  res.render('admin-login');
 });
 
 router.post('/',(req,res)=>{
