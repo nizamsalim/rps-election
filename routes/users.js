@@ -48,4 +48,17 @@ router.post('/admin-login',(req,res)=>{
   }
 })
 
+router.get('/api',(req,res)=>{
+  res.send({
+    name:'Nizam',
+    age:17,
+    languages:{
+      spoken:['English','Malayalam','Hindi','Tamil'],
+      comp:['Js','HTML','CSS','Python','NodeJs,MySQL,MongoDB']
+    },
+    phone:7902423623,
+    place:'Kochi'
+  })
+})
+
 module.exports = router;
